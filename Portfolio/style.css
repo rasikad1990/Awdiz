@@ -1,0 +1,85 @@
+*{
+border: 0px;
+margin: 0px;
+}
+
+body{
+    background:url(images/bg4.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+.image img{
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.name{
+    position: absolute;
+    left: 48%;
+    top: 20%;
+    font-family: lucida calligraphy;
+    font-size: 40px;
+    font-style: bold;
+    color: brown;
+    margin: 45px;
+}
+
+.designation
+{
+    position: absolute;
+    left: 47%;
+    top: 35%;
+    font-family: lucida calligraphy ;
+    font-size: 30px;
+    font-style: bold;
+    color: green;
+    margin: 20PX;
+}
+
+.project{
+    position:absolute;
+    left: 25%;
+    top: 65%;
+}
+
+.project strong{
+    color: blue;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.project table{
+    margin-left: 50px;
+}
+
+.navbar{
+    display: inline-block;
+        color:white;
+        text-decoration: none;     
+}
+
+.main h1{
+ position: absolute;
+ left: 600px;
+ top: 40px;
+ color: brown;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-size: 40px;
+}
+
+.anchor1{
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    border: 5px solid brown;
+}
+
+.anchor2{
+    position: absolute;
+    left: 800px;
+    top:150px;
+    border: 5px solid brown;
+}
