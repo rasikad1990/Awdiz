@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/97810e6541.js" crossorigin="anonymous"></script>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function login()
+        {
+            alert("You have logged in!");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="image">
+        <img src="pizza.png" alt="pizza" width="100" height="100">
+    </div>
+    <div class="head">
+        <h1>The Pizza Corner</h1>
+    </div>
+    <div class="container">
+        <p>Log In</p>
+        <div class="box">
+            <i class="fa-solid fa-user"></i>  &nbsp; 
+            <input type="text" name="t1" id="t1" placeholder="Username" required>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-lock"></i>  &nbsp; 
+            <input type="Password" name="p1" id="p1" placeholder="Password" required>
+        </div>
+        <div class="robot">
+            <input type="checkbox" name="ch1" id="ch1"> &nbsp;  I am not a robot
+        </div>
+        <div class="btn">
+            <input type="submit" value="Log In" onclick="login()"><br>
+        </div>
+        <div class="btn2">
+            <input type="button" value="Forgot Password?"><br>
+        </div>
+        <div class="btn2">
+            <input type="button" value="Dont' have an account? Sign Up" onclick="window.location='signup.html'">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REGISTRATION FORM</title>
+    <style>
+        h1,h2{
+            margin: auto;
+            //background-color: blanchedalmond;
+            width: fit-content;
+            height: fit-content;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-image:url("college.jpg");
+            background-size: cover; 
+            background-repeat: no-repeat;  
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+	<br>
+    <h1 align = "center" style="color: brown;">ABC COLLEGE</h1><br>
+    <h2 align = "center" style="color:blue">Student Registration Form</h2><br>
+    <form action="get">
+        <table style = "font-size:20px" border="0" align="center" cellpadding = "8">
+            <tr>
+                <td ><input type="text" name="t1" id="t1" placeholder="First Name" required></td>
+ 	<td><input type="text" name="t2" id="t2" placeholder="Last Name" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="t2" id="t2" cols="30" rows="4" placeholder="Residential Address" required></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="number" name="n1" id="n1" placeholder="Phone number" required maxlength="10"></td>
+            </tr>
+            <tr>
+                <td><b>Date of Birth:</b></td>
+                <td><input type="date" name="dob1" id="dob1" required></td>
+            </tr>
+            <tr>
+                <td><b>Gender:</b></td>
+                <td><input type="radio" name="r1" id="r1">Male
+                    <input type="radio" name="r1" id="r2">Female
+                    <input type="radio" name="r1" id="r3">Transgender
+                </td>
+            </tr>
+            <tr>
+                <td><b>City:</b></td>
+                <td><select name="s1" id="s1">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Delhi">Delhi</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><b>Documents to submit:</b></td>
+                <td><input type="checkbox" name="c1" id="c1">Graduation certificate<br>
+                    <input type="checkbox" name="c2" id="c2">HSC<br>
+                    <input type="checkbox" name="c3" id="c3">SSC</td>
+            </tr>
+            <tr>
+                <td><b>Upload documents:</b></td>
+                <td><input type="file" name="filetoupload" id="filetoupload"></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset form">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
