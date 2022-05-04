@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Armstrong Number in JavaScript
+    </title>
+        <script>
+            function checkArmstrong() {
+            num=document.getElementById("number").value;
+            var Number=num;
+            var digits=0;
+
+            while(num > 0) {
+                digits=digits+1;
+                num=parseInt(num/10);
+            }
+
+            num=Number;
+            var sum=0;
+
+            var i;
+
+            for (i=0; i<digits; i++) {
+                var digit=num%10;
+                sum=sum+Math.pow(digit, digits);
+                num=parseInt(num/10);
+            }
+
+            if(sum==Number) {
+                document.getElementById("result").innerHTML="The number: "+Number+" is Armstrong Number";
+            }
+
+            else {
+                document.getElementById("result").innerHTML="The number: "+Number+" is NOT Armstrong Number";
+            }
+        }
+
+        </script>
+</head>
+
+<body>
+    Number: <input type="text" name="number" required id="number">
+    <button type="button" onclick="checkArmstrong()"> Submit </button>
+    <p id="result"> </p>
+
+
+</body>
+
+</html>

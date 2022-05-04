@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        function addNumber() {
+            var num, rem, sum = 0;
+            num = parseInt(document.getElementById("num").value);
+            while (num) {
+                rem = num % 10;
+                sum = sum + rem;
+                num = Math.floor(num / 10);
+            }
+            document.getElementById("result").value = sum;
+        }
+    </script>
+</head>
+
+<body>
+
+    <p><input id="num" placeholder="Enter the Number: "></p>
+    <button onclick="addNumber()">Add digits</button>
+    <p>Result = <input id="result"></p>
+
+</body>
+
+</html>
