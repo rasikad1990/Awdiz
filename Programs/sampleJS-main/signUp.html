@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script>
+        function loadUserDetails(e) {
+            // e.preventDefault();
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) => searchParams.get(prop),
+            });
+            document.getElementById('unm').innerHTML = params.u;
+            document.getElementById('profile_pic').src = params.pp;
+        }
+    </script>
+</head>
+
+<body onload="loadUserDetails(event)">
+    <div>
+        <div>
+            <div style="float: left;">
+                <img id="profile_pic" src="" alt="pic">
+            </div>
+            <div style="float: left;">
+                <p>Hi <span id="unm">{{username}}</span>, 
+                    Thanks for choosing us. We are delighted to have you onboard.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

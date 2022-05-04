@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script>
+        let isValidUser = false;
+        let isValidPass = false;
+        let isValidConfPass = false;
+        let isValidPrevImg = false;
+
+        function signUp(form, e) {
+            e.preventDefault();
+            var [pp] = form.profile_pic.files;
+            var username = form.username.value;
+            if (isValidUser && isValidPass
+                && isValidConfPass && isValidPrevImg)
+                window.location.href = '/signUp.html?u=' + username + '&pp=' +
+                    URL.createObjectURL(pp);
+        }
+
+        function previewImage(e) {
+            var [file] = document.getElementById('imgInp').files;
+            if (file) {
+                document.getElementById('profile_pic').src =
+                    URL.createObjectURL(file);
+                isValidPrevImg = true;
+                setValid(isValidPrevImg, 'Hell No');
+            }
+        }
+
+        function validateText(e, value) {
+            var takenUsers = ['Hey', 'Hi', 'Hello'];
+            isValidUser = !takenUsers.includes(value);
+            setValid(isValidUser, 'User is already taken.');
+        }
+
+        function validatePass(e, value) {
+            var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g
+            isValidPass = regex.test(value);
+            setValid(isValidPass, 'Invalid password');
+        }
+
+        function validateConfPass(e, confPass) {
+            var pass = document.getElementById('pass').value;
+            isValidConfPass = (pass === confPass);
+            setValid(isValidConfPass, "Password And Confirmed passwords don't match");
+        }
+
+        function setValid(valid, errMsg) {
+            if (!valid) {
+                document.getElementById('validCont').innerHTML = errMsg;
+            }else if(isValidUser && isValidPass
+                && isValidConfPass && isValidPrevImg) {
+                document.getElementById('validCont').innerHTML = '';
+            }else{
+                document.getElementById('validCont').innerHTML = 'Please complete the form';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form onsubmit="signUp(this, event)" id="signup_form">
+            <input placeholder="Enter username" type="text" name="username" 
+                onblur="validateText(event, value)">
+            <input placeholder="Enter password" type="password" id="pass" name="pass" 
+                onblur="validatePass(event, value)">
+            <input placeholder="Confirm password" type="password" id="conf_password" 
+                name="conf_password" onblur="validateConfPass(event, value)">
+            <input id="imgInp" onchange="previewImage(event)" type="file" name="profile_pic" 
+                accept="image/*">
+            <input type="submit" value="sign up">
+        </form>
+    </div>
+    <div>
+        <div><span id="validCont"></span></div>
+        <img id="profile_pic" src="" alt="ur uploaded profile pic should appear here">
+    </div>
+</body>
+
+</html>

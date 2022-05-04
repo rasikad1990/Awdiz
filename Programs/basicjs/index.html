@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="script/script-calc.js"></script>
+    <link rel="stylesheet" href="css/style-calc.css">
+</head>
+
+<body>
+    <div class="container-div">
+        <form onsubmit="findResult(this, event)">
+            <div class="div-text">
+                <label for="a">a: </label>
+                <input type="text" name="a" id="a">
+            </div>
+            <div class="div-text">
+                <label for="b">b: </label>
+                <input type="text" name="b" id="">
+            </div>
+            <br>
+            <br>
+            <select name="operator" id="operator">
+                <option value="+">Add (+)</option>
+                <option value="-">Subtract (-)</option>
+                <option value="*">Multiply (*)</option>
+                <option value="/">Divide (/)</option>
+                <option value="%">Remainder (%)</option>
+                <option value="%">Power (^)</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="calculate">
+        </form>
+        <br>
+        <div class="result-div">
+            <span id="result-span"></span>
+        </div>
+    </div>
+</body>
+
+</html>
