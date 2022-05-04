@@ -1,0 +1,46 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var ddl = document.getElementById('mycontainer').getElementsByTagName("select")[0];
+            for (var i = 15; i <= 100; i++) {
+                var theOption = new Option;
+                theOption.text = i;
+                theOption.value = i;
+                ddl.options[i] = theOption;
+            }
+        };
+
+        function populateSpan(form, e)
+        {
+
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="populateSpan(this, event)" id="form1" runat="server">
+        <div>
+            <div id="mycontainer">
+                <input type="text" name="n1" id="n1" placeholder="Enter your name">
+                <select id="AgeDropdownId" name="AgeDropdown" class="AgeDropdown" runat="server">
+                    <option value="15">
+                        <--Select Age-->
+                    </option>
+                </select>
+            </div>
+            <div id="mt">
+                <input type="text" name="t1" id="t1" placeholder="Mother tongue">
+            </div>
+        </div>
+        <div>
+            Hi <span id="sp1">{{n1}}</span>
+        </div>
+    </form>
+</body>
+
+</html>
