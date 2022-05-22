@@ -8,10 +8,16 @@
     <script src="https://kit.fontawesome.com/97810e6541.js" crossorigin="anonymous"></script>
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
     <script>
-        function login()
-        {
-            alert("You have logged in!");
+        function login() {
+            document.querySelector("#login-div").style.visibility="visible";
+            document.querySelector("#signup-div").style.visibility="hidden";
+        }
+        function signup() {
+            // window.location = 'signup.html';
+            document.querySelector("#login-div").style.visibility="hidden";
+            document.querySelector("#signup-div").style.visibility="visible";
         }
     </script>
 </head>
@@ -23,18 +29,18 @@
     <div class="head">
         <h1>The Pizza Corner</h1>
     </div>
-    <div class="container">
+    <div class="container" id="login-div">
         <p>Log In</p>
         <div class="box">
-            <i class="fa-solid fa-user"></i>  &nbsp; 
+            <i class="fa-solid fa-user"></i> &nbsp;
             <input type="text" name="t1" id="t1" placeholder="Username" required>
         </div>
         <div class="box">
-            <i class="fa-solid fa-lock"></i>  &nbsp; 
+            <i class="fa-solid fa-lock"></i> &nbsp;
             <input type="Password" name="p1" id="p1" placeholder="Password" required>
         </div>
         <div class="robot">
-            <input type="checkbox" name="ch1" id="ch1"> &nbsp;  I am not a robot
+            <input type="checkbox" name="ch1" id="ch1"> &nbsp; I am not a robot
         </div>
         <div class="btn">
             <input type="submit" value="Log In" onclick="login()"><br>
@@ -43,7 +49,36 @@
             <input type="button" value="Forgot Password?"><br>
         </div>
         <div class="btn2">
-            <input type="button" value="Dont' have an account? Sign Up" onclick="window.location='signup.html'">
+            <input type="button" value="Sign Up" onclick="signup()">
+        </div>
+    </div>
+    <div class="container" id="signup-div" style="visibility:hidden;">
+        <p>Sign Up</p>
+        <div class="class">
+            <input type="text" name="un" id="un" placeholder="Username" required=[-]><br>
+            <input type="password" name="ps" id="ps" placeholder="Password" required><br>
+            <input type="password" name="cps" id="cps" placeholder="Confirm Password" required><br>
+            <input type="date" name="dob" id="dob" placeholder="Date of Birth" required><br>
+            <div class="pp">Profile photo
+                <input type="file" name="profile" id="profile" accept="image/*" required><br>
+            </div>
+            Gender: <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+                <option value="no">Don't want to mention</option>
+            </select><br><br>
+            Food Preferences: <input type="radio" name="foodpref" id="foodpref">Veg
+            <input type="radio" name="foodpref" id="foodpref">NonVeg
+            <div class="btn">
+                <input type="submit" value="Signup">
+            </div>
+            <div class="btn2">
+                <input type="button" value="Reset">
+            </div>
+            <div class="btn2">
+                <input type="button" value="Login" onclick="login()">
+            </div>
         </div>
     </div>
 </body>

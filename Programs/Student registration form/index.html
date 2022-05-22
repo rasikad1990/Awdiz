@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <script>
+        let studentCount = 1;
+        function addElement() {
+            studentCount++;
+            let newTr = document.createElement("tr");
+            let rollTd = document.createElement("td");
+            let inputTd = document.createElement("input");
+            inputTd.type = "text";
+            inputTd.name = "roll";
+            inputTd.value = studentCount;
+            inputTd.id = "roll" + studentCount;
+            rollTd.appendChild(inputTd);
+            newTr.appendChild(rollTd);
+
+            let snameTd = document.createElement("td");
+            let inputNmTd = document.createElement("input");
+            inputNmTd.type = "text";
+            inputNmTd.name = "sname";
+            inputNmTd.id = "sname" + studentCount;
+            snameTd.appendChild(inputNmTd);
+            newTr.appendChild(snameTd);
+
+            let genderTd = document.createElement("td");
+            let inputGenderTd = document.createElement("select");
+            inputGenderTd.name = "gender";
+            inputGenderTd.id = "gender" + studentCount;
+            genderTd.appendChild(inputGenderTd);
+            newTr.appendChild(genderTd);
+            let optMale = document.createElement("option");
+            optMale.value = "male";
+            optMale.innerHTML = "Male";
+            let optFemale = document.createElement("option");
+            optFemale.value = "female";
+            optFemale.innerHTML = "Female";
+            let optOthers = document.createElement("option");
+            optOthers.value = "Others";
+            optOthers.innerHTML = "Others";
+            inputGenderTd.appendChild(optMale);
+            inputGenderTd.appendChild(optFemale);
+            inputGenderTd.appendChild(optOthers);
+
+            let dateTd = document.createElement("td");
+            let inputDtTd = document.createElement("input");
+            inputDtTd.type = "date";
+            inputDtTd.name = "dob";
+            inputDtTd.id = "dob" + studentCount;
+            dateTd.appendChild(inputDtTd);
+            newTr.appendChild(dateTd);
+
+            let stdTd = document.createElement("td");
+            let inputStdTd = document.createElement("input");
+            inputStdTd.type = "number";
+            inputStdTd.name = "std";
+            inputStdTd.id = "std" + studentCount;
+            inputStdTd.min = 1;
+            inputStdTd.max = 12;
+            stdTd.appendChild(inputStdTd);
+            newTr.appendChild(stdTd);
+
+            let sectionTd = document.createElement("td");
+            let inputSecTd = document.createElement("select");
+            inputSecTd.name = "gender";
+            inputSecTd.id = "gender" + studentCount;
+            sectionTd.appendChild(inputSecTd);
+            newTr.appendChild(sectionTd);
+            let optA = document.createElement("option");
+            optA.value = "A";
+            optA.innerHTML = "A";
+            let optB = document.createElement("option");
+            optB.value = "B";
+            optB.innerHTML = "B";
+            let optC = document.createElement("option");
+            optC.value = "C";
+            optC.innerHTML = "C";
+            inputSecTd.appendChild(optA);
+            inputSecTd.appendChild(optB);
+            inputSecTd.appendChild(optC);
+            document.querySelector("tbody").appendChild(newTr);
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p> Add Students
+                <input type="button" value="Add" onclick="addElement()">
+                <input type="button" value="Delete">
+            </p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Std.</th>
+                    <th>Section</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="roll" id="roll1" value="1"></td>
+                    <td><input type="text" name="sname" id="sname1"></td>
+                    <td><select name="gender" id="gender1">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="Others">Others</option>
+                        </select></td>
+                    <td><input type="date" name="dob" id="dob1"></td>
+                    <td><input type="number" name="std" id="std1" min="1" max="12"></td>
+                    <td><select name="section" id="section1">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -21,20 +21,35 @@
     <div class="container">
         <p>Sign Up</p>
         <div class="class">
-            <i class="fa-solid fa-circle-user"></i> &nbsp;
-            <input type="text" name="Fn" id="fn" placeholder="Name" required><br>
+<!--             <i class="fa-solid fa-circle-user"></i> &nbsp;
+            <input type="text" name="Fn" id="fn" placeholder="Username" required><br>
             <i class="fa-solid fa-envelope"></i> &nbsp;
-            <input type="text" name="Fn" id="fn" placeholder="Email Id" required><br>
-            <i class="fa-solid fa-user"></i> &nbsp; 
-            <input type="text" name="un" id="un" placeholder="Username" required><br>
-            <i class="fa-solid fa-lock"></i> &nbsp; 
-            <input type="text" name="ps" id="ps" placeholder="Password" required><br>
-        </div>
-        <div class="btn">
-            <input type="submit" value="Signup">
-        </div>
-            <div class="btn2">
-            <input type="button" value="Reset">
+            <input type="text" name="Fn" id="fn" placeholder="Email Id" required><br> -->
+            <!-- <i class="fa-solid fa-user"></i> &nbsp;  -->
+            <input type="text" name="un" id="un" placeholder="Username" required=[-]><br>
+            <!-- <i class="fa-solid fa-lock"></i> &nbsp;  -->
+            <input type="password" name="ps" id="ps" placeholder="Password" required><br>
+            <!-- <i class="fa-solid fa-lock"></i> &nbsp;  -->
+            <input type="password" name="cps" id="cps" placeholder="Confirm Password" required><br>
+            <!-- <i class="fa-solid fa-lock"></i> &nbsp;  -->
+            <input type="date" name="dob" id="dob" placeholder="Date of Birth" required><br>
+            <!-- <i class="fa-solid fa-lock"></i> &nbsp;  -->
+            <div class="pp">Profile photo
+            <input type="file" name="profile" id="profile" accept="image/*" required><br></div> 
+            Gender: <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+                <option value="no">Don't want to mention</option>
+            </select><br><br>
+            Food Preferences: <input type="radio" name="foodpref" id="foodpref">Veg
+            <input type="radio" name="foodpref" id="foodpref">NonVeg
+            <div class="btn">
+                <input type="submit" value="Signup">
+            </div>
+                <div class="btn2">
+                <input type="button" value="Reset">
+            </div>
         </div>
     </div>
 </body>

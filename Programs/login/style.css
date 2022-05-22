@@ -1,40 +1,40 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
-    background:url(bg.jpg) no-repeat center fixed;
+body {
+    background: url(bg.jpg) no-repeat center fixed;
     background-size: cover;
 }
 
-.image{
+.image {
     position: absolute;
     left: 76px;
     top: 23px;
 }
 
-h1{
+h1 {
     font-size: 50px;
 }
 
-.head{
-color: gold;
-position: absolute;
-left: 185px;
-top: 40px;
-font-family: lucida calligraphy;
+.head {
+    color: gold;
+    position: absolute;
+    left: 185px;
+    top: 40px;
+    font-family: lucida calligraphy;
 }
 
-.container{
-color: white;
-position: absolute;
-left: 200px;
-top: 150px;
+.container {
+    color: white;
+    position: absolute;
+    left: 200px;
+    top: 150px;
 
 }
 
-p{
+p {
     border-bottom: 3px solid gold;
     font-size: 30px;
     display: inline-block;
@@ -43,14 +43,12 @@ p{
     color: gold;
 }
 
-.box
-{
+.box {
     width: 100%;
     margin: 5px 10px;
 }
 
-.box input
-{
+.box input {
     /* background: none; */
     font-size: 15px;
     border-radius: 10px;
@@ -58,18 +56,17 @@ p{
     /* border:none; */
 }
 
-.robot{
-font-size: 20px;
-margin: 20px 10px;
+.robot {
+    font-size: 20px;
+    margin: 20px 10px;
 }
 
-.robot input{
-width: 20px;
-height: 20px;
+.robot input {
+    width: 20px;
+    height: 20px;
 }
 
-.btn2 input
-{
+.btn2 input {
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -81,8 +78,7 @@ height: 20px;
     margin: 5px 5px;
 }
 
-.btn input
-{
+.btn input {
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
@@ -90,5 +86,5 @@ height: 20px;
     padding: 5px 5px;
     font-weight: bold;
     margin: 5px 5px;
-    background-color:goldenrod;
+    background-color: goldenrod;
 }
